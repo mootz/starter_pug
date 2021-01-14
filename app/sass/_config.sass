@@ -1,0 +1,83 @@
+// USER VARIABLES SECTION
+
+$accent: rgb(216, 89, 32) // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #000000 // Text Color
+$titlecolor: #7C6656
+$bordercolor: #959E9F
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, Arial, sans-serif // Manrope Font Family
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 20px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+    @font-face
+        font-family: $fname
+        font-style: $fstyle
+        font-weight: $fweight
+        font-display: swap // Uncomment to initially display system fonts
+        src: local($fname), url($furl) format('woff2')
+
+@include font('Montserrat', normal, 400, '../fonts/Montserrat/Montserrat-Regular.woff2')
+@include font('Montserrat', normal, 700, '../fonts/Montserrat/Montserrat-Bold.woff2')
+@include font('Montserrat', normal, 800, '../fonts/Montserrat/Montserrat-ExtraBold.woff2')
+@include font('Montserrat', normal, 900, '../fonts/Montserrat/Montserrat-Black.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: $accent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+body
+    font-family: $montserrat
+    font-size: $fontsize
+    min-width: 320px
+    position: relative
+    line-height: 24px
+    overflow-x: hidden
+    color: $textcolor
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+a
+    text-decoration: none
+    color: currentColor
+
+    &:active
+        outline: none
+
+p
+    margin: 0
+
+h1,h2,h3,h4,h5
+    margin: 0
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+*
+    box-sizing: border-box
