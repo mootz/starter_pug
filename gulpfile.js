@@ -52,7 +52,7 @@ function scriptsLibs() {
         // Берём файлы из источников
         'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
         'node_modules/swiper/swiper-bundle.min.js',
-        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
+        // 'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
         'node_modules/inputmask/dist/jquery.inputmask.min.js',
         'app/js/plugins/jquery.fancybox.min.js',
     ])
@@ -78,7 +78,7 @@ function stylesLibs() {
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css',
         'node_modules/hamburgers/dist/hamburgers.min.css',
-        'node_modules/jquery-nice-select/css/nice-select.css',
+        // 'node_modules/jquery-nice-select/css/nice-select.css',
         'app/css/plugins/jquery.fancybox.min.css',
     ])
         .pipe(concat('libs.min.css')) // Конкатенируем в файл app.min.js
